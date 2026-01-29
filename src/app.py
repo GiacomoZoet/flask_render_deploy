@@ -18,6 +18,10 @@ def index():
     return f'<h1>Hello, World!{username}<br>{email}<br>{password}</h1>', 200
 
 
+@app.route('/healthz')
+def healthz():
+    return 'OK', 200
+
 def status_404(error):
     return '<h1>404</h1>', 404
 
